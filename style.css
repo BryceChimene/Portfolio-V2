@@ -1,29 +1,54 @@
-body{
-    background-color: black;
-    margin: 0;
-    padding: 0;
+body {
+  margin: 0;
+  padding: 0;
 }
 
-.homepage-header{
-    position: relative;
-    height: 80vh;
+header {
+    display: flex;
+    align-items: center;
+    height: 70vh;
+    background-color: beige;
 }
-.header-background{
-    position: absolute;
-    width: 100%;
-    height: 80vh;
-    background-color: pink;
-    color: white;
+.header-container {
+  display: grid;
+  grid-template-columns: 50px 1fr .5fr 1fr 50px;
+  width: 100%;
 }
-.header-background > p{
-    text-align: center;
-    font-size: 25vw;
+.name-container {
+    grid-area: 1/2/1/4;
+    background-color: aqua;
+}
+.name-container > h1{
     margin: 0;
-    padding: 0;
+    font-size: 50pt;
+    font-weight: 300;
+    font-family: sans-serif;
 }
-.span-hello{
-    letter-spacing: 27px;
+.name-container > h1 > span{
+    font-size: 40pt;
 }
-.span-world{
-    letter-spacing: 6px;
+.world-container {
+    grid-area: 1/3/1/5;
+    position: relative;
+    height: 100%;
+}
+.globe {
+    position:absolute;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: green;
+}
+.wrapper {
+  padding: 0 10%;
+  text-align: center;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  font-size: 50pt;
+  font-weight: 900;
+  color: black;
+  font-family: monospace;
+  background-color: red;
 }
