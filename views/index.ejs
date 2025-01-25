@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio V2</title>
-  <link rel="stylesheet" href="styles/style.css">
-</head>
-<body>
-  <%- include("./partials/header.ejs") %>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio V2</title>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <section id="loading-screen">
+      <h1 id="shared-text">Bryce</h1>
+    </section>
 
-  <section id="homepage-hero">
-    <div class="container">
-      <h1>Bryce <span>Powell-Chimene</span></h1>
-      <img src="globe.png">
-      <h2>PORTFOLIO</h2>
-      <h3>Software Developer</h3>
-    </div>
-  </section>
+    <!-- Homepage Content -->
+    <section id="homepage-hero" class="hidden">
+      <div>
+        <h1>A lot of text and other stuff</h1>
+      </div>
+    </section>
 
-  <%- include("./partials/footer.ejs") %>
-</body>
+    <script src="/script/animations.js"></script>
+  </body>
 </html>
