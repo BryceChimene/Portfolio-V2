@@ -1,7 +1,7 @@
 body{
   margin: 0;
 }
-header{
+#homepage-hero > div{
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,27 +9,27 @@ header{
   height: 70vh;
   background-color: beige;
 }
-header > h1 {
+#homepage-hero h1 {
   margin: 0;
   margin-bottom: -90px;
   text-align: center;
   font-size: 50pt;
   z-index: 2;
 }
-header > h1 > span{
+#homepage-hero h1 > span{
   display: block;
   font-size: 30pt;
 }
-header > h2 {
+#homepage-hero h2 {
   font-family: sans-serif;
   font-size: 50pt;
   font-weight: 400;
   margin: 0;
   margin-top: -90px;
 }
-header > h3 {
+#homepage-hero h3 {
   margin: 0;
 }
-header > img{
+#homepage-hero img{
   height: 400px;
 }
