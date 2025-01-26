@@ -27,7 +27,7 @@ body, html {
 }
 
 #loading-screen.shrink {
-  height: 25%;
+  height: 200px;
   opacity: 0.8; /* Slight fade to avoid abrupt disappearance */
 }
 
