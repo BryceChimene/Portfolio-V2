@@ -1,8 +1,9 @@
 body, html {
   margin: 0;
-  background-color: gray;
-  overflow: hidden; /* Prevent scrolling during loading */
-  height: 100%;
+}
+small{
+  color: aqua;
+  font-size: 0.35em;
 }
 
 .hidden {
@@ -24,7 +25,7 @@ body, html {
   font-size: 2rem;
   transform: translateX(0);
   transition: height 1s ease-in-out;
-  z-index: 1000
+  z-index: 1000;
 }
 #loading-screen.shrink {
   height: 200px;
@@ -36,17 +37,11 @@ body, html {
   flex: 1;
   max-width: fit-content;
 }
-#fill-space{
-  flex: 0;
-  transition: flex 1s;
-}
-.filled{
-  flex: none;
-}
 .type-writer-animation{
   display: block;
-  letter-spacing: 10px;
-  border-right: 5px solid;
+  letter-spacing: 5px;
+  font-size: .6em;
+  border-right: 5px solid aqua;
   width: 100%;
   white-space: nowrap;
   overflow: hidden;
@@ -61,12 +56,43 @@ body, html {
   from {width: 0}
 }
 
-/* Homepage */
+/* To animate Name towards left */
+#fill-space{
+  flex: 0;
+  transition: flex 1s;
+}
+.filled{
+  flex: none;
+}
+
+/* Hero */
+#hero{
+  background-color: red;
+  height: 80vh;
+}
 #homepage-hero {
-  display: block;
   opacity: 0;
   transition: opacity 1s ease-in;
-  height: 100%;
-  overflow: auto;
   background-color: green;
+}
+
+/* NavBar */
+#nav-bar{
+  position: sticky;
+  top: 0;
+  height: 100px;
+  width: 100%;
+  background-color: pink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#temp-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: yellow;
+  height: 1600px;
 }

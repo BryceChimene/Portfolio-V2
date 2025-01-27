@@ -13,6 +13,7 @@ window.addEventListener('load', () => {
         loadingScreen.style.position = 'relative';
         slideH1Left.style.flex = 'auto';
         mainContent.classList.remove('hidden');
+        mainContent.style.opacity = '1'; // Fade in the main content
       });
     }, 3000); // Adjust delay (in milliseconds) as needed
   });

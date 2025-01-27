@@ -7,22 +7,33 @@
     <link rel="stylesheet" href="styles/style.css">
   </head>
   <body>
-    <!-- Loading Screen -->
-    <section id="hero">
+    
+    <header id="hero">
+      <!-- Loading Screen -->
       <div id="loading-screen">
         <div class="type-writer-container">
-          <h1>Hello I'm<span class="type-writer-animation">Bryce Powell-Chimene</span></h1>
+          <h1><small>Hello I'm</small><span class="type-writer-animation">Bryce Powell-Chimene</span></h1>
         </div>
         <div id="fill-space" class="filled"></div>
       </div>
-      <!-- Homepage Content -->
-      <section id="homepage-hero" class="hidden">
-        <div>
-          <h1>A lot of text and other stuff</h1>
-        </div>
-      </section>
-    </section>
 
+      <!-- Homepage Content -->
+      <div id="homepage-hero" class="hidden">
+        <div>
+          <p>Lorem ipsum odor amet, consectetuer adipiscing elit. Hendrerit eleifend felis vitae torquent turpis, nibh metus. Justo ullamcorper curabitur sed fermentum justo. Sociosqu est eros posuere vehicula aliquet euismod habitant semper sociosqu.
+          </p>
+        </div>
+      </div>
+      
+    </header>
+
+    <!-- Nav-bar -->
+    <%- include('./partials/navbar.ejs'); %>
+
+    <section id="temp-info">
+      THis will be even more information here...
+    </section>
+    
 
     <script src="/script/animations.js"></script>
   </body>
