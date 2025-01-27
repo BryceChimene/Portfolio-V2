@@ -11,7 +11,7 @@ body, html {
 
 /* Loading Screen */
 #loading-screen {
-  position: fixed; /* Ensure it stays at the top of the page */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -19,16 +19,46 @@ body, html {
   align-items: center;
   justify-content: center;
   height: 100%;
-  background: #000; /* Black background */
-  color: #fff; /* White text */
+  background: #000;
+  color: #fff;
   font-size: 2rem;
-  transition: height 1s ease-in-out, opacity 1s ease-in-out; /* Smooth transition */
-  z-index: 1000; /* Keep above other content */
+  transform: translateX(0);
+  transition: height 1s ease-in-out;
+  z-index: 1000
 }
-
 #loading-screen.shrink {
   height: 200px;
-  opacity: 0.8; /* Slight fade to avoid abrupt disappearance */
+}
+
+/* Typing animation */
+.type-writer-container{
+  display: inline-block;
+  flex: 1;
+  max-width: fit-content;
+}
+#fill-space{
+  flex: 0;
+  transition: flex 1s;
+}
+.filled{
+  flex: none;
+}
+.type-writer-animation{
+  display: block;
+  letter-spacing: 10px;
+  border-right: 5px solid;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: 
+  typing 2s steps(20),
+  cursor .5s step-end infinite alternate;
+}
+@keyframes cursor{
+  50% { border-color: transparent}
+}
+@keyframes typing {
+  from {width: 0}
 }
 
 /* Homepage */
