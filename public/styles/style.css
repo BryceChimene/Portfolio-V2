@@ -9,6 +9,10 @@ small{
 .hidden {
   display: none;
 }
+.center-horizontally{
+  display: flex;
+  justify-content: center;
+}
 
 /* Loading Screen */
 #loading-screen {
@@ -23,11 +27,11 @@ small{
   background: #000;
   color: #fff;
   font-size: 2rem;
-  transform: translateX(0);
   transition: all 1s ease-in-out;
   z-index: 1000;
 }
 #loading-screen.shrink {
+  position: relative;
   height: 200px;
   background: transparent;
 }
@@ -35,7 +39,6 @@ small{
 /* Typing animation */
 .type-writer-container{
   display: inline-block;
-  flex: 1;
   max-width: fit-content;
 }
 .type-writer-animation{
@@ -57,15 +60,6 @@ small{
   from {width: 0}
 }
 
-/* To animate Name towards left */
-#fill-space{
-  flex: 0;
-  transition: flex 1s;
-}
-.filled{
-  flex: none;
-}
-
 #particle-js{
   position: absolute;
   top: 0;
@@ -74,20 +68,36 @@ small{
   height: 100%;
   z-index: 0;
 }
+#this-work{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+}
 
 /* Hero */
 #hero{
   position: relative;
-  overflow: hidden;
   background-color: black;
   height: 80vh;
 }
-#homepage-hero {
+#hero-content-container {
   position: relative;
+  width: 100%;
   opacity: 0;
   transition: opacity 1s ease-in;
   background-color: green;
-  z-index: 4000;
+}
+.hero-content{
+  max-width: 850px;
+  min-width: 400px;
+  background-color: pink;
 }
 
 /* NavBar */

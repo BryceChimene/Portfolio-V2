@@ -1,7 +1,6 @@
 window.addEventListener('load', () => {
   const loadingScreen = document.getElementById('loading-screen');
-  const mainContent = document.getElementById('homepage-hero');
-  const slideH1Left = document.getElementById('fill-space');
+  const mainContent = document.getElementById('hero-content-container');
 
   // Simulate a loading delay
   setTimeout(() => {
@@ -10,10 +9,10 @@ window.addEventListener('load', () => {
 
     // Wait for the transition to complete before showing the main content
     loadingScreen.addEventListener('transitionend', () => {
-      loadingScreen.style.position = 'absolute';
-      slideH1Left.style.flex = 'auto';
+      loadingScreen.style.position = 'relative';
       mainContent.classList.remove('hidden');
       mainContent.style.opacity = '1'; // Fade in the main content
+      
     });
   }, 3000); // Adjust delay (in milliseconds) as needed
 });
