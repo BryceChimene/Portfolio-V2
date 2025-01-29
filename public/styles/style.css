@@ -3,9 +3,11 @@ body, html {
 }
 small{
   color: aqua;
-  font-size: 0.35em;
 }
-
+h1, p{
+  margin: 0;
+  padding: 0;
+}
 .hidden {
   display: none;
 }
@@ -14,31 +16,61 @@ small{
   justify-content: center;
 }
 
-/* Loading Screen */
-#loading-screen {
-  position: fixed;
+/* Hero Section */
+#hero{
+  position: relative;
+  background-color: black;
+  height: 90vh;
+}
+
+#particle-js{ /* Interactive Background */
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+#hero-container-loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100%;
   background: #000;
   color: #fff;
   font-size: 2rem;
   transition: all 1s ease-in-out;
-  z-index: 1000;
+  z-index: 1;
 }
-#loading-screen.shrink {
-  position: relative;
-  height: 200px;
+#hero-container-loading.shrink {
+  height: 100%;
   background: transparent;
 }
 
-/* Typing animation */
-.type-writer-container{
+.adjust-width{
+  display: flex;
+  justify-content: center;
+  max-width: 850px;
+  min-width: 400px;
+  width: 100%;
+  background-color: pink;
+}
+.dummy{
+  flex: 0;
+  transition: flex 1s;
+}
+.adjust-width:hover .hovered {
+  flex: auto;
+}
+.type-writer-container{ /* Typing animation */
   display: inline-block;
+  flex: 1;
   max-width: fit-content;
 }
 .type-writer-animation{
@@ -60,51 +92,19 @@ small{
   from {width: 0}
 }
 
-#particle-js{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-#this-work{
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  pointer-events: none;
-}
-
-/* Hero */
-#hero{
-  position: relative;
-  background-color: black;
-  height: 80vh;
-}
-#hero-content-container {
-  position: relative;
-  width: 100%;
+#hero-content-container { /* Contains Text and CV button */
   opacity: 0;
   transition: opacity 1s ease-in;
-  background-color: green;
-}
-.hero-content{
   max-width: 850px;
   min-width: 400px;
-  background-color: pink;
 }
+
 
 /* NavBar */
 #nav-bar{
   position: sticky;
   top: 0;
-  height: 100px;
+  height: 10vh;
   width: 100%;
   background-color: pink;
   display: flex;
