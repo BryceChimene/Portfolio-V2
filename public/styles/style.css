@@ -1,5 +1,6 @@
 body, html {
   margin: 0;
+  color: #fff;
 }
 small{
   color: aqua;
@@ -16,23 +17,8 @@ h1, p{
   justify-content: center;
 }
 
-/* Hero Section */
-#hero{
-  position: relative;
-  background-color: black;
-  height: 90vh;
-}
-
-#particle-js{ /* Interactive Background */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-}
-
-#hero-container-loading {
+/* Loading Screen */
+#loading-screen {
   position: absolute;
   top: 0;
   left: 0;
@@ -47,27 +33,25 @@ h1, p{
   font-size: 2rem;
   transition: all 1s ease-in-out;
   z-index: 1;
+  pointer-events: none;
 }
-#hero-container-loading.shrink {
+#loading-screen.remove {
+  opacity: 0;
   height: 100%;
   background: transparent;
 }
-
-.adjust-width{
+#loading-ballz{
   display: flex;
   justify-content: center;
-  max-width: 850px;
-  min-width: 400px;
-  width: 100%;
-  background-color: pink;
+  gap: 20px;
 }
-.dummy{
-  flex: 0;
-  transition: flex 1s;
+#loading-ballz > div{
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-color: red;
 }
-.adjust-width:hover .hovered {
-  flex: auto;
-}
+
 .type-writer-container{ /* Typing animation */
   display: inline-block;
   flex: 1;
@@ -92,11 +76,36 @@ h1, p{
   from {width: 0}
 }
 
+
+/* Hero Section */
+#hero{
+  position: relative;
+  background-color: black;
+  height: 90vh;
+}
+
+#particle-js{ /* Interactive Background */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
 #hero-content-container { /* Contains Text and CV button */
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
   opacity: 0;
   transition: opacity 1s ease-in;
-  max-width: 850px;
-  min-width: 400px;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
 }
 
 

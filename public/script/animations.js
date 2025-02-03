@@ -1,11 +1,11 @@
 window.addEventListener('load', () => {
-  const loadingScreen = document.getElementById('hero-container-loading');
+  const loadingScreen = document.getElementById('loading-screen');
   const mainContent = document.getElementById('hero-content-container');
 
   // Simulate a loading delay
   setTimeout(() => {
     // Shrink the loading screen to 200px height
-    loadingScreen.classList.add('shrink');
+    loadingScreen.classList.add('remove');
 
     // Wait for the transition to complete before showing the main content
     loadingScreen.addEventListener('transitionend', () => {
